@@ -1,0 +1,28 @@
+Maximum iterations [100-4000]?
+
+Max error at iteration 1 was 100.000000
+Total time was 0.740476 seconds.
+
+Accelerator Kernel Timing data
+/home/jboyer/day2/OpenACC/laplace_acc.c
+  main  NVIDIA  devicenum=0
+    time(us): 1,735
+    59: data region reached 2 times
+        59: data copyin transfers: 2
+             device time(us): total=725 max=718 min=7 avg=362
+        91: data copyout transfers: 2
+             device time(us): total=716 max=699 min=17 avg=358
+    63: compute region reached 1 time
+        65: kernel launched 1 time
+            grid: [32x250]  block: [32x4]
+             device time(us): total=120 max=120 min=120 avg=120
+            elapsed time(us): total=487 max=487 min=487 avg=487
+    74: compute region reached 1 time
+        76: kernel launched 1 time
+            grid: [32x250]  block: [32x4]
+             device time(us): total=154 max=154 min=154 avg=154
+            elapsed time(us): total=183 max=183 min=183 avg=183
+        76: reduction kernel launched 1 time
+            grid: [1]  block: [256]
+             device time(us): total=20 max=20 min=20 avg=20
+            elapsed time(us): total=45 max=45 min=45 avg=45

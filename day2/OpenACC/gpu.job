@@ -1,0 +1,11 @@
+#!/bin/bash
+#export PGI_ACC_TIME=1
+#SBATCH -N 1
+#SBATCH -p GPU-shared
+#SBATCH --ntasks-per-node 7
+#SBATCH --gres=gpu:1
+#SBATCH -t 5
+#SBATCH -A tr4s85p
+#SBATCH --reservation=gpudata
+
+echo "4000" | ./a.out
